@@ -8,8 +8,10 @@
     "start": "next start"
   },
   "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
     "coingecko-api": "^1.0.10",
     "next": "9.3.5",
+    "node-sass": "^4.14.1",
     "react": "16.13.1",
     "react-dom": "16.13.1"
   }
