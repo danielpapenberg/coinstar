@@ -1,0 +1,27 @@
+.headerWrapper {
+    background-color: #000;
+    color: #f5f5f7;
+    padding: 0 15px;
+
+    .headerCnt {
+        width: 100%;
+        max-width: 1000px;
+        margin: 0 auto;
+
+        .logoCnt {
+            display: inline-block;
+            padding: 15px 0;
+
+            .logoTxt {
+                display: block;
+                color: #ffb428;
+                font-size: 34px;
+
+                span {
+                    color:#f5f5f7;;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}
