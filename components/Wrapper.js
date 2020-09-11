@@ -1,21 +1,20 @@
 import React, { Component } from 'react';
 import Head from 'next/head'
-import reset from 'scss/reset.scss';
-import basic from 'scss/basic.scss';
 import Header from 'components/header/Header';
 
 class Wrapper extends Component {
     render() {
         return (
-            <div className={basic.mainWrapper}>
+            <div className='mainWrapper'>
                 <Head>
                     <title>COINSTAR</title>
                     <link rel="icon" href="/favicon.ico" />
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"></meta>
                 </Head>
 
                 <Header />
 
-                <div className={basic.mainContent}>
+                <div className='mainContent'>
                     {this.props.children}
                 </div>
 

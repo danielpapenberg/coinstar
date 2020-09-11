@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from 'scss/components/Header.scss';
+import styles from 'styles/components/Header.scss';
 import Navigation from 'components/header/Navigation';
 
 class Header extends Component {
