@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styles from 'scss/components/Navigation.scss';
-import NavigationElement from 'pages/components/header/NavigationElement';
+import NavigationElement from 'components/header/NavigationElement';
 
 class Navigation extends Component {
     render() {

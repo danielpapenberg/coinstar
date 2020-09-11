@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Wrapper from 'pages/components/Wrapper';
+import Wrapper from 'components/Wrapper';
 
 function Home() {
     return (

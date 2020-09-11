@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import styles from 'scss/components/Header.scss';
-import Navigation from 'pages/components/header/Navigation';
+import Navigation from 'components/header/Navigation';
 
 class Header extends Component {
     render() {
