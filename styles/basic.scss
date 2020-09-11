@@ -3,10 +3,21 @@
     width: 100%;
 
     .mainContent {
-        width: 100%;
         max-width: 1000px;
         margin: 15px auto;
-        padding: 0 15px;
         color: #1d1d1f;
+        padding: 0 15px;
     }
+}
+
+.paddingHorizontal {
+    padding: 0 15px;
+}
+
+.paddingVertical {
+    padding: 15px 0;
+}
+
+.paddingBoth {
+    padding: 15px;
 }
