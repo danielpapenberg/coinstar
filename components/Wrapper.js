@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Head from 'next/head'
 import reset from 'scss/reset.scss';
 import basic from 'scss/basic.scss';
-import Header from 'pages/components/header/Header';
+import Header from 'components/header/Header';
 
 class Wrapper extends Component {
     render() {
