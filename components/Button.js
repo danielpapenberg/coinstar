@@ -5,7 +5,7 @@ class Button extends Component {
     render() {
         return (
             <div className={styles.buttonCnt}>
-                <button>{this.props.label}</button>
+                <button onClick={this.props.onClickFunc}>{this.props.label}</button>
             </div>
         )
     }

@@ -12,12 +12,12 @@ export default class AddCoin extends Component {
         super();
         this.state = {
             showPopup: false,
+            listSelectedCoins: {},
             coinlist: [{
-                id: 'Lädt'
+                id: 'Keine Daten vorhanden'
             }]
         }
 
-        // Get coinlist from local storage
         let coinlist = ls.get('cl') || null;
         const coinlistExpired = ls.get('cle') || null;
         const now = new Date().getTime();
@@ -50,6 +50,22 @@ export default class AddCoin extends Component {
         }
     }
 
+    saveSelectedCoins(event, value, reason) {
+        const listSelectedCoins = value.map((option) =>
+            <li key={option.toString()}>
+                {option}
+            </li>
+        );
+
+        this.setState({
+            listSelectedCoins: listSelectedCoins
+        });
+    }
+
+    submitSelectedCoins() {
+        this.togglePopup();
+    }
+
     render() {
         return (
             <div>
@@ -60,31 +76,25 @@ export default class AddCoin extends Component {
                 {
                     this.state.showPopup ? 
                     
-                    <Popup headline='Neuen Coin hinzufügen' closePopup={this.togglePopup.bind(this)}> 
+                    <Popup headline='Coin(s) hinzufügen' onClickFunc={this.togglePopup.bind(this)}> 
                         <Autocomplete
                             id="coinstar"
-                            freeSolo
-                            options={this.state.coinlist.map((option) => option.id)}
+                            multiple
+                            options={this.state.coinlist.map((option) => option.name)}
+                            onChange={this.saveSelectedCoins.bind(this)}
                             renderInput={(params) => (
                                 <TextField {...params} label="Suche deinen Coin" margin="normal" variant="outlined" />
                             )}
                         />
 
-                        <Button label='Coin hinzufügen' />
+                        <Button label='Hinzufügen' onClickFunc={this.submitSelectedCoins.bind(this)} />
                     </Popup>
                     
                     : null
                 }
+
+                {this.state.listSelectedCoins}
             </div>
         )
     }
 }
-
-/**
- * 
- * {
-                            this.props.coinlist.map((item, index) => {
-                                return <li key={index}>{item.id}</li>
-                            })
-                        }
- */

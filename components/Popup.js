@@ -12,9 +12,9 @@ export default class Popup extends React.Component {
                             {this.props.children}
                         </div>
                     </div>
-                    <div className={styles.close} onClick={this.props.closePopup}><span>+</span></div>
+                    <div className={styles.close} onClick={this.props.onClickFunc}><span>+</span></div>
                 </div>
-                <div className={styles.opacityBackground} onClick={this.props.closePopup}></div>
+                <div className={styles.opacityBackground} onClick={this.props.onClickFunc}></div>
             </div>
         );
     }
