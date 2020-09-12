@@ -7,12 +7,11 @@ import TextField from '@material-ui/core/TextField';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 
 export default class AddCoin extends Component {
-
     constructor(props) {
         super();
         this.state = {
             showPopup: false,
-            listSelectedCoins: {},
+            listSelectedCoins: [],
             coinlist: [{
                 id: 'Keine Daten vorhanden'
             }]
@@ -92,8 +91,9 @@ export default class AddCoin extends Component {
                     
                     : null
                 }
-
-                {this.state.listSelectedCoins}
+                <div>
+                    {this.state.listSelectedCoins}
+                </div>
             </div>
         )
     }
