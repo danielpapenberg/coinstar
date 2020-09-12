@@ -7,8 +7,7 @@ class Navigation extends Component {
         return (
             <div className={styles.navigationCnt}>
                 <ul className={styles.navigationList}>
-                    <NavigationElement label='Erster' link='/start' />
-                    <NavigationElement label='Zweiter' link='/'  />
+                    
                 </ul>
             </div>
         )
@@ -16,3 +15,8 @@ class Navigation extends Component {
 }
 
 export default Navigation;
+
+/**
+ * <NavigationElement label='Wie funktioniert es?' link='/start' /
+ *  <NavigationElement label='Coinliste erstellen' link='/'  />
+ */

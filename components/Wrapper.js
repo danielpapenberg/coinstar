@@ -9,7 +9,9 @@ class Wrapper extends Component {
                 <Head>
                     <title>COINSTAR</title>
                     <link rel="icon" href="/favicon.ico" />
-                    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"></meta>
+                    <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
+                    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
+                    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
                 </Head>
 
                 <Header />
